@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Babe 🌹❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ff4e78,#ff9a9e);
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
+.start{
+    text-align:center;
+}
+
+.start button{
+    padding:15px 35px;
+    font-size:1.2em;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#ff4e78;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.08)}
+    100%{transform:scale(1)}
+}
+
+.card{
+    display:none;
+    max-width:450px;
+    width:90%;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    text-align:center;
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:scale(.9)}
+    to{opacity:1;transform:scale(1)}
+}
+
+h1{
+    font-size:2em;
+    margin-bottom:10px;
+}
+
+.name{
+    font-size:1.4em;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+p{
+    font-size:1.05em;
+    line-height:1.6;
+}
+
+.heart{
+    font-size:2em;
+    animation:heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat{
+    0%{transform:scale(1)}
+    25%{transform:scale(1.15)}
+    50%{transform:scale(1)}
+    75%{transform:scale(1.15)}
+    100%{transform:scale(1)}
+}
+
+.rose{
+    position:absolute;
+    top:-50px;
+    font-size:1.8em;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{transform:translateY(110vh)}
+}
+
+.footer{
+    margin-top:12px;
+    font-size:.9em;
+    opacity:.9;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Rose Day Music from your link -->
+<audio id="bgMusic" loop>
+    <source src="https://interested-harlequin-rwnyk1axqh.edgeone.app/rose-music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="start" id="start">
+    <h1>🌹 A Special Surprise 🌹</h1>
+    <button onclick="openSurprise()">Open With Love ❤️</button>
+</div>
+
+<div class="card" id="card">
+    <h1>Happy Rose Day 🌹</h1>
+
+    <div class="name">
+        My Babe 🌹❤️ <br>
+        My Future Wife 🌹❤️
+    </div>
+
+    <p>
+        Just like a rose 🌹,  
+        you bring beauty ✨,  
+        softness 💕,  
+        and happiness 😊  
+        into my life.
+    </p>
+
+    <p>
+        I care for you 💖,  
+        I miss you 😘,  
+        and I hold you close  
+        in my heart always 💞
+    </p>
+
+    <p>
+        Believe in yourself 🌟  
+        Study with confidence 📚  
+        Chase your dreams 💫  
+        Success will follow you 🌈
+    </p>
+
+    <div class="heart">💘💖💞</div>
+
+    <div class="footer">
+        Forever With You ❤️
+    </div>
+</div>
+
+<script>
+function openSurprise(){
+    document.getElementById("start").style.display="none";
+    document.getElementById("card").style.display="block";
+    document.getElementById("bgMusic").play();
+    createRoses();
+}
+
+function createRoses(){
+    for(let i=0;i<30;i++){
+        let rose=document.createElement("div");
+        rose.className="rose";
+        rose.innerHTML="🌹";
+        rose.style.left=Math.random()*100+"vw";
+        rose.style.animationDuration=(3+Math.random()*4)+"s";
+        document.body.appendChild(rose);
+    }
+}
+</script>
+
+</body>
+</html>
